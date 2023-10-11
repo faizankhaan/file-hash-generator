@@ -4,19 +4,19 @@ This Python application provides a graphical user interface for generating file 
 
 ## Features
 
-  - Graphical User Interface: A user-friendly interface built with tkinter for easy interaction.
-  - Hashing Algorithms: Supports three common hashing algorithms - MD5, SHA1, and SHA256.
-  - Excel Export: Saves the hash data to an Excel spreadsheet for easy management and analysis.
-  - PDF Conversion: Converts the Excel file into a well-formatted PDF document for sharing and printing.
+  - **Graphical User Interface:** A user-friendly interface built with tkinter for easy interaction.
+  - **Hashing Algorithms:** Supports three common hashing algorithms - MD5, SHA1, and SHA256.
+  - **Excel Export:** Saves the hash data to an Excel spreadsheet for easy management and analysis.
+  - **PDF Conversion:** Converts the Excel file into a well-formatted PDF document for sharing and printing.
 
 ## Dependencies
 
-  - tkinter: Used for creating the graphical user interface.
-  - os: Provides file and directory handling functions.
-  - hashlib: Enables the calculation of hash values.
-  - pandas: Used for creating and manipulating data in the form of dataframes.
-  - fpdf: Allows for the creation of PDF documents.
-  - openpyxl: Used to work with Excel files.
+  - **tkinter:** Used for creating the graphical user interface.
+  - **os:** Provides file and directory handling functions.
+  - **hashlib:** Enables the calculation of hash values.
+  - **pandas:** Used for creating and manipulating data in the form of dataframes.
+  - **fpdf:** Allows for the creation of PDF documents.
+  - **openpyxl:** Used to work with Excel files.
 
 ## How to Use
   
