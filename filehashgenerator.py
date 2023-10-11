@@ -1,3 +1,9 @@
+"""
+File Hash Generator
+Author: Muhammad Faizan Khan
+Date: October 11, 2023
+"""
+
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import os
