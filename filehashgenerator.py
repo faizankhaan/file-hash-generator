@@ -76,18 +76,19 @@ class HashGeneratorApp:
                 row.update({algorithm: hash_values[algorithm] for algorithm in selected_algorithms})
                 output_data.append(row)
 
-        #Save as Excel and PDF in the target directory
-        output_excel_file = os.path.join(target_directory, "Files Hash List.xlsx")
-        self.save_to_excel(output_data, output_excel_file)
-        messagebox.showinfo("Info", "Hashes saved as Excel and PDF in the target directory.")
+        # Ask where to save the Excel and PDF files
+        output_dir = filedialog.askdirectory(title="Select Output Directory")
+        if output_dir:
+            output_excel_file = os.path.join(output_dir, "Files Hash List.xlsx")
+            self.save_to_excel(output_data, output_excel_file)
+
+            output_pdf_file = os.path.join(output_dir, "Files Hash List.pdf")
+            self.convert_excel_to_pdf(output_excel_file, output_pdf_file)
+            messagebox.showinfo("Info", "Hashes saved as Excel and PDF in the selected directory.")
 
     def save_to_excel(self, data, excel_file):
         df = pd.DataFrame(data)
         df.to_excel(excel_file, index=False)
-
-        # Convert Excel to PDF and fit columns on a single page
-        pdf_file = excel_file.replace(".xlsx", ".pdf")
-        self.convert_excel_to_pdf(excel_file, pdf_file)
 
     def convert_excel_to_pdf(self, excel_file, pdf_file):
         wb = load_workbook(excel_file)
@@ -124,7 +125,6 @@ class HashGeneratorApp:
             pdf.ln()
 
         pdf.output(pdf_file)
-
 
 if __name__ == "__main__":
     app = HashGeneratorApp()
