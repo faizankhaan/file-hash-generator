@@ -23,8 +23,8 @@ This Python application provides a graphical user interface for generating file 
   - Run the application.
   - Click the "Browse" button to select the directory containing the files you want to hash.
   - Choose the desired hashing algorithms (MD5, SHA1, and SHA256).
-  - Click "Generate Hashes" to calculate and save the file hashes.
+  - Click "Generate Hashes" to calculate file hashes and select the output directory for saving generated hashes.
 
-The generated hashes are stored in an Excel spreadsheet called "Files Hash List.xlsx" and a PDF document in the selected target directory.
+The generated hashes are stored in an Excel spreadsheet called "Files Hash List.xlsx" and a PDF document in the selected output directory.
 
 Simplify your file hashing tasks and enhance data management with this efficient utility!
