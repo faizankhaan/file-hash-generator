@@ -75,6 +75,7 @@ class HashGeneratorApp:
                 }
                 row.update({algorithm: hash_values[algorithm] for algorithm in selected_algorithms})
                 output_data.append(row)
+                print("Hashing File: ", relative_path)
 
         # Ask where to save the Excel and PDF files
         output_dir = filedialog.askdirectory(title="Select Output Directory")
